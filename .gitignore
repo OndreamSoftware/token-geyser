@@ -74,3 +74,6 @@ coverage/
 coverageEnv/
 
 .openzeppelin
+
+.env
+migrations/*.js

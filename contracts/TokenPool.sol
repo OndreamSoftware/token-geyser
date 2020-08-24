@@ -9,6 +9,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
  * needs to hold multiple distinct pools of the same token.
  */
 contract TokenPool is Ownable {
+    
     IERC20 public token;
 
     constructor(IERC20 _token) public {

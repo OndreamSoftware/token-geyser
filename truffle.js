@@ -1,11 +1,13 @@
 const connectionConfig = require('frg-ethereum-runners/config/network_config.json');
+const HDWalletProvider = require('truffle-hdwallet-provider');
+
+require('dotenv').config();
 
 const mainnetUrl = 'https://mainnet.infura.io/v3/2521699167dc43c8b4c15f07860c208a';
 
 function keystoreProvider (providerURL) {
   const fs = require('fs');
   const EthereumjsWallet = require('ethereumjs-wallet');
-  const HDWalletProvider = require('truffle-hdwallet-provider');
 
   const KEYFILE = process.env.KEYFILE;
   const PASSPHRASE = (process.env.PASSPHRASE || '');
@@ -24,6 +26,12 @@ module.exports = {
     ganacheUnitTest: connectionConfig.ganacheUnitTest,
     gethUnitTest: connectionConfig.gethUnitTest,
     testrpcCoverage: connectionConfig.testrpcCoverage,
+    ropsten: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, process.env.ROPSTEN_PROVIDER),
+      network_id: 3,
+      gas: 3000000,
+      gasPrice: 10000000000
+    },
     mainnet: {
       ref: 'mainnet-prod',
       network_id: 1,

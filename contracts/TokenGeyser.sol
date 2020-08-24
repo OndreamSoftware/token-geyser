@@ -79,9 +79,7 @@ contract TokenGeyser is IStaking, Ownable {
     // The collection of stakes for each user. Ordered by timestamp, earliest to latest.
     mapping(address => Stake[]) private _userStakes;
 
-    //
     // Locked/Unlocked Accounting state
-    //
     struct UnlockSchedule {
         uint256 initialLockedShares;
         uint256 unlockedShares;
