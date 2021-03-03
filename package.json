@@ -1,22 +1,14 @@
 {
   "name": "token-geyser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A smart-contract based mechanism to distribute tokens over time, inspired loosely by Compound and Uniswap.",
   "keywords": [
     "ethereum",
     "smart-contracts",
     "solidity"
   ],
-  "homepage": "https://github.com/ampleforth/continuous-vesting-distribution#readme",
-  "bugs": {
-    "url": "https://github.com/ampleforth/continuous-vesting-distribution/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ampleforth/continuous-vesting-distribution.git"
-  },
   "license": "GPL-3.0",
-  "author": "dev-support@ampleforth.org",
+  "author": "elite-dev-1012",
   "scripts": {
     "precommit": "./scripts/pre-commit.sh",
     "compile-contracts": "./scripts/compile-contracts.sh",
